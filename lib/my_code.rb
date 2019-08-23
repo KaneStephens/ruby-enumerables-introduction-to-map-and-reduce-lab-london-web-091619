@@ -47,5 +47,10 @@ def reduce_to_all_true(array)
 end  
 
 def reduce_to_any_true(array)
-  array.any?(true)
+  counter = 0
+  while counter < array.length do
+    return true if array[counter]
+    i += 1
+  end
+  return false
 end
